@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCSJDM Student Event Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 40 40" role="img" aria-label="CCSJDM logo">
+                <circle cx="20" cy="20" r="20" fill="#1a73e8"></circle>
+                <rect x="10" y="12" width="20" height="18" rx="3" fill="#ffffff"></rect>
+                <rect x="10" y="12" width="20" height="5" rx="2" fill="#0d47a1"></rect>
+                <rect x="14" y="8" width="2.5" height="7" rx="1.2" fill="#0d47a1"></rect>
+                <rect x="23.5" y="8" width="2.5" height="7" rx="1.2" fill="#0d47a1"></rect>
+                <circle cx="16" cy="23" r="1.6" fill="#1a73e8"></circle>
+                <circle cx="20" cy="23" r="1.6" fill="#1a73e8"></circle>
+                <circle cx="24" cy="23" r="1.6" fill="#1a73e8"></circle>
+            </svg>
+            <span class="brand-title">CCSJDM Student Event Hub</span>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="my-events.html">My Schedule</a>
+            <a href="checkin.html">Check-in Desk</a>
+            <a href="officer.html" class="nav-link-host">Host Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="search-filter-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for events, seminars, or organizations..." aria-label="Search events">
+                <button id="searchBtn" aria-label="Search">&#128269;</button>
+            </div>
+
+            <div class="filter-group">
+                <div class="categories">
+                    <span class="filter-label">Categories:</span>
+                    <button class="chip active" data-category="all">All</button>
+                    <button class="chip" data-category="Seminar">Seminar</button>
+                    <button class="chip" data-category="Workshop">Workshop</button>
+                    <button class="chip" data-category="Culture">Culture</button>
+                    <button class="chip" data-category="Sports">Sports</button>
+                </div>
+
+                <div class="dropdown-filters">
+                    <select id="dateFilter" aria-label="Filter by date">
+                        <option value="all">Date: All Upcoming</option>
+                        <option value="this-week">This Week</option>
+                        <option value="next-week">Next Week</option>
+                    </select>
+
+                    <select id="orgFilter" aria-label="Filter by organization"></select>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid" id="eventsGrid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CCSJDM Student Event Hub. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact</a>
+            <a href="officer.html">Host Dashboard</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

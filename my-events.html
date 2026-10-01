@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule and Attendance - CCSJDM Student Event Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 40 40" role="img" aria-label="CCSJDM logo">
+                <circle cx="20" cy="20" r="20" fill="#1a73e8"></circle>
+                <rect x="10" y="12" width="20" height="18" rx="3" fill="#ffffff"></rect>
+                <rect x="10" y="12" width="20" height="5" rx="2" fill="#0d47a1"></rect>
+                <rect x="14" y="8" width="2.5" height="7" rx="1.2" fill="#0d47a1"></rect>
+                <rect x="23.5" y="8" width="2.5" height="7" rx="1.2" fill="#0d47a1"></rect>
+                <circle cx="16" cy="23" r="1.6" fill="#1a73e8"></circle>
+                <circle cx="20" cy="23" r="1.6" fill="#1a73e8"></circle>
+                <circle cx="24" cy="23" r="1.6" fill="#1a73e8"></circle>
+            </svg>
+            <span class="brand-title">CCSJDM Student Event Hub</span>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="my-events.html" class="active">My Schedule</a>
+            <a href="checkin.html">Check-in Desk</a>
+            <a href="officer.html" class="nav-link-host">Host Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-header">
+            <div>
+                <h2>My Calendar and Attendance</h2>
+                <p class="subtitle">View your registered events, event codes, and attendance status.</p>
+            </div>
+            <div class="student-profile-summary" id="studentProfileSummary"></div>
+        </section>
+
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="registered">Registered Events (<span id="regCount">0</span>)</button>
+            <button class="tab-btn" data-tab="history">Attendance History (<span id="histCount">0</span>)</button>
+        </div>
+
+        <div class="tab-content active" id="registeredTab">
+            <div class="events-grid" id="myRegisteredGrid"></div>
+        </div>
+
+        <div class="tab-content" id="historyTab">
+            <div class="table-responsive">
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Event Title</th>
+                            <th>Date and Time</th>
+                            <th>Venue</th>
+                            <th>Event Code</th>
+                            <th>Attendance Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceHistoryBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CCSJDM Student Event Hub. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact</a>
+            <a href="officer.html">Host Dashboard</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
